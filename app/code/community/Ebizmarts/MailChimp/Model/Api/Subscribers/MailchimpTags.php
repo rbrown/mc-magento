@@ -272,7 +272,7 @@ class Ebizmarts_MailChimp_Model_Api_Subscribers_MailchimpTags
      */
     protected function _addSubscriberData($subscriber, $fname, $lname, $email, $listId)
     {
-        $helper = $this->getHelper();
+        $helper = Mage::helper('mailchimp');
         $scopeArray = $helper->getFirstScopeFromConfig(
             Ebizmarts_MailChimp_Model_Config::GENERAL_LIST,
             $listId
